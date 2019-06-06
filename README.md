@@ -43,7 +43,7 @@ Server.1=Master:3333:4444  Server.2=slave1:3333:4444   就写1  2 】
 
 【集群模式下除了多个zookeeper外，在myid文件中也需要添加server.X中的X】
 
-  <img src="https://img-blog.csdnimg.cn/20190606144338640.png" width="220" height="220" alt=""/>
+  <img src="https://img-blog.csdnimg.cn/20190606144338640.png" width="120" height="120" alt=""/>
 
 修改完之后保存退出，进入bin目录下，启动
 
@@ -84,12 +84,22 @@ https://download.csdn.net/download/weixin_38964895/11229138
 
 使用时候三个项目分别放在三个tomcat
 
-先启动api
+**先启动api
 再启动provider
 再启动consumer
 再启动provider中的main
 再启动consumer中的main 
 
+<img src="https://img-blog.csdnimg.cn/2019060615050052.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zODk2NDg5NQ==,size_16,color_FFFFFF,t_70" width="500" height="400" alt=""/>
+<br><br>
+<img src="https://img-blog.csdnimg.cn/20190606150512170.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zODk2NDg5NQ==,size_16,color_FFFFFF,t_70" width="500" height="400" alt=""/>
+<br><br>
+<img src="https://img-blog.csdnimg.cn/20190606150601200.png" width="500" height="400" alt=""/>
+<br><br>
+<img src="https://img-blog.csdnimg.cn/201906061513218.png" width="500" height="400" alt=""/>
+<br><br>
+<img src="https://img-blog.csdnimg.cn/20190606150708567.png" width="500" height="400" alt=""/>
+<br><br>
 4.常见问题及解决方案
   在搭建过程中，zookeeper搭建没有遇到问题，遇到也都是可以百度到的，下面针对dubbo启动的一次错误日志，给出我此次的解决方案：
 
@@ -172,14 +182,14 @@ Caused by: java.net.UnknownHostException: izwz91b8s2j56km66xiwxcz
 
 具体修改方案如下：
 
-vi /etc/hosts
+**vi /etc/hosts
 
-
+<img src="https://img-blog.csdnimg.cn/20190606150123817.png" width="200" height="200" alt=""/>
 
 遮挡部分对应自己的实例ID即可
 
-vim /etc/sysconfig/network  
-
+**vim /etc/sysconfig/network  
+<img src="https://img-blog.csdnimg.cn/2019060615021593.png" width="200" height="200" alt=""/>
 
 
 修改完之后需要重启Linux，然后再依次启动zookeeper，dubbo。就可以出现第三步的效果了

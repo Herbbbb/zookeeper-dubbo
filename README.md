@@ -1,6 +1,8 @@
 # zookeeper-dubbo
 Spring项目+Dubbo+Zookeeper
 
+# 图片部分失真了，可以看下这个链接：https://blog.csdn.net/weixin_38964895/article/details/91043574
+
 该文章搭建之前需要具备的软件及工具：
 
 1.一台云服务器[我的是阿里云的centos]
@@ -184,7 +186,7 @@ Caused by: java.net.UnknownHostException: izwz91b8s2j56km66xiwxcz
 
 **vi /etc/hosts
 
-<img src="https://img-blog.csdnimg.cn/20190606150123817.png" width="200" height="200" alt=""/>
+<img src="https://img-blog.csdnimg.cn/20190606150123817.png" width="400" height="200" alt=""/>
 
 遮挡部分对应自己的实例ID即可
 

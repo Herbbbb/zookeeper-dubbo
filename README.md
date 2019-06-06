@@ -15,13 +15,13 @@ Spring项目+Dubbo+Zookeeper
 下载zookeeper，安装并解压，此次我用的是：3.4.6，路径如下
 <img src="https://img-blog.csdnimg.cn/20190606143940891.png" width="100%" height="150" alt=""/>
 
-下载地址： zookeeper下载点我
+下载地址： https://download.csdn.net/download/weixin_38964895/11229209
 
 复制一份 zoo_sample.cfg  为 zoo.cfg 如下
- <img src="https://img-blog.csdnimg.cn/20190606144117687.png" width="100%" height="150" alt=""/>
+ <img src="https://img-blog.csdnimg.cn/20190606144117687.png" width="100%" height="220" alt=""/>
 
 vim zoo.cfg
- <img src="https://img-blog.csdnimg.cn/20190606144208857.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zODk2NDg5NQ==,size_16,color_FFFFFF,t_70" width="100%" height="150" alt=""/>
+ <img src="https://img-blog.csdnimg.cn/20190606144208857.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zODk2NDg5NQ==,size_16,color_FFFFFF,t_70" width="100%" height="600" alt=""/>
 
 默认进来之后，会有
 
@@ -31,11 +31,11 @@ Server.2=slave1:3333:4444
 
 Server.3=slave2:3333:4444
 
-注意点1：更改成自己服务器的IP，具体几个server可根据需要添加，由于服务器性能原因，我这里只保留一个，就是单机模式
+### 注意点1：更改成自己服务器的IP，具体几个server可根据需要添加，由于服务器性能原因，我这里只保留一个，就是单机模式
 
-注意点2：上面的dataDir  dataLogDir  先手动去确认一下，没有就手动  mkdir
+### 注意点2：上面的dataDir  dataLogDir  先手动去确认一下，没有就手动 mkdir
 
-注意点3：没有myid文件，需要在上图的：dataDir路径下生成一个【vi myid就行】，同时写入上面的server.X中 的 X
+### 注意点3：没有myid文件，需要在上图的：dataDir路径下生成一个【vi myid就行】，同时写入上面的server.X中 的 X
 
 【Server.1=Master:3333:4444   就在myid中写个1
 
@@ -43,29 +43,33 @@ Server.1=Master:3333:4444  Server.2=slave1:3333:4444   就写1  2 】
 
 【集群模式下除了多个zookeeper外，在myid文件中也需要添加server.X中的X】
 
- 
+  <img src="https://img-blog.csdnimg.cn/20190606144338640.png" width="220" height="220" alt=""/>
 
 修改完之后保存退出，进入bin目录下，启动
 
+<img src="https://img-blog.csdnimg.cn/20190606144444558.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zODk2NDg5NQ==,size_16,color_FFFFFF,t_70" width="500" height="400" alt=""/>
 
- ./zkServer.sh start   启动指令
+ # ./zkServer.sh start   启动指令
 
-./zkServer.sh status 查看启动状态的指令
+ # ./zkServer.sh status 查看启动状态的指令
 
 2.搭建dubbo-admin
 首先下载dubbo-admin的war包，没有的可以在下面的链接进行下载
-dubbo-admin-2.4.1.war
+
+https://download.csdn.net/download/weixin_38964895/11227295
 
 下载完之后，打开找到里面的dubbo.Properties，需要更改一点点[2181端口对应的zookeeper监听的端口]
-dubbo.registry.address=zookeeper://39.108.173.63:2181
+
+dubbo.registry.address=zookeeper://**39.108.173.63**:2181
 
 dubbo.admin.root.password=root
 
 dubbo.admin.guest.password=guest
 
-把红色区域的IP更换成自己的即可
+把加粗区域的IP更换成自己的即可
 然后把war包放在tomcat的webapps路径下
 
+<img src="https://img-blog.csdnimg.cn/20190606144444558.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zODk2NDg5NQ==,size_16,color_FFFFFF,t_70" width="500" height="400" alt=""/>
 
 以上基本就完成了dubbo-admin的相关工作，启动tomcat即可【启动有问题的可以看下第四点：常见问题】
 启动完成之后访问
@@ -73,12 +77,9 @@ dubbo.admin.guest.password=guest
 http://39.108.173.63:8080/dubbo-admin-2.4.1/
 
 3.创建Spring项目并访问 
-Spring项目的创建Demo，是可以直接拿来使用的，导入Eclipse之后更改里面的公网IP即可，对应的代码下载地址：
-SpringDemo下载，即插即用
-
-
-zhuyi
----
+Spring项目的创建Demo，是可以直接拿来使用的，导入Eclipse之后更改里面的公网IP即可，
+对应的代码下载地址：
+https://download.csdn.net/download/weixin_38964895/11229138
 
 
 使用时候三个项目分别放在三个tomcat
@@ -88,11 +89,6 @@ zhuyi
 再启动consumer
 再启动provider中的main
 再启动consumer中的main 
-
-
-
-
-
 
 4.常见问题及解决方案
   在搭建过程中，zookeeper搭建没有遇到问题，遇到也都是可以百度到的，下面针对dubbo启动的一次错误日志，给出我此次的解决方案：

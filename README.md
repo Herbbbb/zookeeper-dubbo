@@ -184,13 +184,13 @@ Caused by: java.net.UnknownHostException: izwz91b8s2j56km66xiwxcz
 
 具体修改方案如下：
 
-**vi /etc/hosts
+**vi /etc/hosts**
 
 <img src="https://img-blog.csdnimg.cn/20190606150123817.png" width="400" height="200" alt=""/>
 
 遮挡部分对应自己的实例ID即可
 
-**vim /etc/sysconfig/network  
+**vim /etc/sysconfig/network**
 <img src="https://img-blog.csdnimg.cn/2019060615021593.png" width="200" height="200" alt=""/>
 
 

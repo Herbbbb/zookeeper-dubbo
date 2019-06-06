@@ -90,15 +90,15 @@ https://download.csdn.net/download/weixin_38964895/11229138
 再启动provider中的main
 再启动consumer中的main 
 
-<img src="https://img-blog.csdnimg.cn/2019060615050052.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zODk2NDg5NQ==,size_16,color_FFFFFF,t_70" width="500" height="400" alt=""/>
+<img src="https://img-blog.csdnimg.cn/2019060615050052.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zODk2NDg5NQ==,size_16,color_FFFFFF,t_70" width="900" height="400" alt=""/>
 <br><br>
-<img src="https://img-blog.csdnimg.cn/20190606150512170.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zODk2NDg5NQ==,size_16,color_FFFFFF,t_70" width="500" height="400" alt=""/>
+<img src="https://img-blog.csdnimg.cn/20190606150512170.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zODk2NDg5NQ==,size_16,color_FFFFFF,t_70" width="900" height="400" alt=""/>
 <br><br>
-<img src="https://img-blog.csdnimg.cn/20190606150601200.png" width="500" height="400" alt=""/>
+<img src="https://img-blog.csdnimg.cn/20190606150601200.png" width="900" height="400" alt=""/>
 <br><br>
-<img src="https://img-blog.csdnimg.cn/201906061513218.png" width="500" height="400" alt=""/>
+<img src="https://img-blog.csdnimg.cn/201906061513218.png" width="900" height="400" alt=""/>
 <br><br>
-<img src="https://img-blog.csdnimg.cn/20190606150708567.png" width="500" height="400" alt=""/>
+<img src="https://img-blog.csdnimg.cn/20190606150708567.png" width="900" height="400" alt=""/>
 <br><br>
 4.常见问题及解决方案
   在搭建过程中，zookeeper搭建没有遇到问题，遇到也都是可以百度到的，下面针对dubbo启动的一次错误日志，给出我此次的解决方案：

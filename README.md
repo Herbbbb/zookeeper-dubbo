@@ -13,15 +13,15 @@ Spring项目+Dubbo+Zookeeper
 
 1.搭建zookeeper
 下载zookeeper，安装并解压，此次我用的是：3.4.6，路径如下
-<img src="https://img-blog.csdnimg.cn/20190606143940891.png" width="150" height="150" alt=""/>
+<img src="https://img-blog.csdnimg.cn/20190606143940891.png" width="100%" height="150" alt=""/>
 
 下载地址： zookeeper下载点我
 
 复制一份 zoo_sample.cfg  为 zoo.cfg 如下
- <img src="https://img-blog.csdnimg.cn/20190606144117687.png" width="150" height="150" alt=""/>
+ <img src="https://img-blog.csdnimg.cn/20190606144117687.png" width="100%" height="150" alt=""/>
 
 vim zoo.cfg
- <img src="https://img-blog.csdnimg.cn/20190606144208857.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zODk2NDg5NQ==,size_16,color_FFFFFF,t_70" width="150" height="150" alt=""/>
+ <img src="https://img-blog.csdnimg.cn/20190606144208857.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zODk2NDg5NQ==,size_16,color_FFFFFF,t_70" width="100%" height="150" alt=""/>
 
 默认进来之后，会有
 

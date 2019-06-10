@@ -25,7 +25,7 @@ Spring项目+Dubbo+Zookeeper
 vim zoo.cfg
  <img src="https://img-blog.csdnimg.cn/20190606144208857.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zODk2NDg5NQ==,size_16,color_FFFFFF,t_70" width="100%" height="600" alt=""/>
 
-默认进来之后，会有
+默认进来之后，会有下面三个Server
 
 Server.1=Master:3333:4444
 
